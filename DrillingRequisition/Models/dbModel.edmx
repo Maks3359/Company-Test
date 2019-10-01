@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TestDB_UpdatedModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MERGED_Data">
+          <Key>
+            <PropertyRef Name="UNITID" />
+          </Key>
+          <Property Name="UNITID" Type="float" Nullable="false" />
+          <Property Name="OPEID" Type="float" />
+          <Property Name="OPEID6" Type="float" />
+          <Property Name="INSTNM" Type="nvarchar" MaxLength="255" />
+          <Property Name="CITY" Type="nvarchar" MaxLength="255" />
+          <Property Name="STABBR" Type="nvarchar" MaxLength="255" />
+          <Property Name="ZIP" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACCREDAGENCY" Type="nvarchar" MaxLength="255" />
+          <Property Name="INSTURL" Type="nvarchar" MaxLength="255" />
+          <Property Name="NPCURL" Type="nvarchar" MaxLength="255" />
+          <Property Name="SCH_DEG" Type="nvarchar" MaxLength="255" />
+          <Property Name="HCM2" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAIN" Type="float" />
+          <Property Name="NUMBRANCH" Type="float" />
+          <Property Name="PREDDEG" Type="float" />
+          <Property Name="HIGHDEG" Type="float" />
+          <Property Name="CONTROL" Type="float" />
+          <Property Name="ST_FIPS" Type="float" />
+          <Property Name="REGION" Type="float" />
+          <Property Name="LOCALE" Type="nvarchar" MaxLength="255" />
+          <Property Name="LOCALE2" Type="nvarchar" MaxLength="255" />
+          <Property Name="LATITUDE" Type="nvarchar" MaxLength="255" />
+          <Property Name="LONGITUDE" Type="nvarchar" MaxLength="255" />
+          <Property Name="CCBASIC" Type="nvarchar" MaxLength="255" />
+          <Property Name="CCUGPROF" Type="nvarchar" MaxLength="255" />
+          <Property Name="CCSIZSET" Type="nvarchar" MaxLength="255" />
+          <Property Name="HBCU" Type="nvarchar" MaxLength="255" />
+          <Property Name="PBI" Type="nvarchar" MaxLength="255" />
+          <Property Name="ANNHI" Type="nvarchar" MaxLength="255" />
+          <Property Name="TRIBAL" Type="nvarchar" MaxLength="255" />
+          <Property Name="AANAPII" Type="nvarchar" MaxLength="255" />
+          <Property Name="HSI" Type="nvarchar" MaxLength="255" />
+          <Property Name="NANTI" Type="nvarchar" MaxLength="255" />
+          <Property Name="MENONLY" Type="nvarchar" MaxLength="255" />
+          <Property Name="WOMENONLY" Type="nvarchar" MaxLength="255" />
+          <Property Name="RELAFFIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADM_RATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADM_RATE_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATVR25" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATVR75" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATMT25" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATMT75" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATWR25" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATWR75" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATVRMID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATMTMID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SATWRMID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTCM25" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTCM75" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTEN25" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTEN75" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTMT25" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTMT75" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTWR25" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTWR75" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTCMMID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTENMID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTMTMID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTWRMID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAT_AVG" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAT_AVG_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="PCIP01" Type="float" />
+          <Property Name="PCIP03" Type="float" />
+          <Property Name="PCIP04" Type="float" />
+          <Property Name="PCIP05" Type="float" />
+          <Property Name="PCIP09" Type="float" />
+          <Property Name="PCIP10" Type="float" />
+          <Property Name="PCIP11" Type="float" />
+          <Property Name="PCIP12" Type="float" />
+          <Property Name="PCIP13" Type="float" />
+          <Property Name="PCIP14" Type="float" />
+          <Property Name="PCIP15" Type="float" />
+          <Property Name="PCIP16" Type="float" />
+          <Property Name="PCIP19" Type="float" />
+          <Property Name="PCIP22" Type="float" />
+          <Property Name="PCIP23" Type="float" />
+          <Property Name="PCIP24" Type="float" />
+          <Property Name="PCIP25" Type="float" />
+          <Property Name="PCIP26" Type="float" />
+          <Property Name="PCIP27" Type="float" />
+          <Property Name="PCIP29" Type="float" />
+          <Property Name="PCIP30" Type="float" />
+          <Property Name="PCIP31" Type="float" />
+          <Property Name="PCIP38" Type="float" />
+          <Property Name="PCIP39" Type="float" />
+          <Property Name="PCIP40" Type="float" />
+          <Property Name="PCIP41" Type="float" />
+          <Property Name="PCIP42" Type="float" />
+          <Property Name="PCIP43" Type="float" />
+          <Property Name="PCIP44" Type="float" />
+          <Property Name="PCIP45" Type="float" />
+          <Property Name="PCIP46" Type="float" />
+          <Property Name="PCIP47" Type="float" />
+          <Property Name="PCIP48" Type="float" />
+          <Property Name="PCIP49" Type="float" />
+          <Property Name="PCIP50" Type="float" />
+          <Property Name="PCIP51" Type="float" />
+          <Property Name="PCIP52" Type="float" />
+          <Property Name="PCIP54" Type="float" />
+          <Property Name="CIP01CERT1" Type="float" />
+          <Property Name="CIP01CERT2" Type="float" />
+          <Property Name="CIP01ASSOC" Type="float" />
+          <Property Name="CIP01CERT4" Type="float" />
+          <Property Name="CIP01BACHL" Type="float" />
+          <Property Name="CIP03CERT1" Type="float" />
+          <Property Name="CIP03CERT2" Type="float" />
+          <Property Name="CIP03ASSOC" Type="float" />
+          <Property Name="CIP03CERT4" Type="float" />
+          <Property Name="CIP03BACHL" Type="float" />
+          <Property Name="CIP04CERT1" Type="float" />
+          <Property Name="CIP04CERT2" Type="float" />
+          <Property Name="CIP04ASSOC" Type="float" />
+          <Property Name="CIP04CERT4" Type="float" />
+          <Property Name="CIP04BACHL" Type="float" />
+          <Property Name="CIP05CERT1" Type="float" />
+          <Property Name="CIP05CERT2" Type="float" />
+          <Property Name="CIP05ASSOC" Type="float" />
+          <Property Name="CIP05CERT4" Type="float" />
+          <Property Name="CIP05BACHL" Type="float" />
+          <Property Name="CIP09CERT1" Type="float" />
+          <Property Name="CIP09CERT2" Type="float" />
+          <Property Name="CIP09ASSOC" Type="float" />
+          <Property Name="CIP09CERT4" Type="float" />
+          <Property Name="CIP09BACHL" Type="float" />
+          <Property Name="CIP10CERT1" Type="float" />
+          <Property Name="CIP10CERT2" Type="float" />
+          <Property Name="CIP10ASSOC" Type="float" />
+          <Property Name="CIP10CERT4" Type="float" />
+          <Property Name="CIP10BACHL" Type="float" />
+          <Property Name="CIP11CERT1" Type="float" />
+          <Property Name="CIP11CERT2" Type="float" />
+          <Property Name="CIP11ASSOC" Type="float" />
+          <Property Name="CIP11CERT4" Type="float" />
+          <Property Name="CIP11BACHL" Type="float" />
+          <Property Name="CIP12CERT1" Type="float" />
+          <Property Name="CIP12CERT2" Type="float" />
+          <Property Name="CIP12ASSOC" Type="float" />
+          <Property Name="CIP12CERT4" Type="float" />
+          <Property Name="CIP12BACHL" Type="float" />
+          <Property Name="CIP13CERT1" Type="float" />
+          <Property Name="CIP13CERT2" Type="float" />
+          <Property Name="CIP13ASSOC" Type="float" />
+          <Property Name="CIP13CERT4" Type="float" />
+          <Property Name="CIP13BACHL" Type="float" />
+          <Property Name="CIP14CERT1" Type="float" />
+          <Property Name="CIP14CERT2" Type="float" />
+          <Property Name="CIP14ASSOC" Type="float" />
+          <Property Name="CIP14CERT4" Type="float" />
+          <Property Name="CIP14BACHL" Type="float" />
+          <Property Name="CIP15CERT1" Type="float" />
+          <Property Name="CIP15CERT2" Type="float" />
+          <Property Name="CIP15ASSOC" Type="float" />
+          <Property Name="CIP15CERT4" Type="float" />
+          <Property Name="CIP15BACHL" Type="float" />
+          <Property Name="CIP16CERT1" Type="float" />
+          <Property Name="CIP16CERT2" Type="float" />
+          <Property Name="CIP16ASSOC" Type="float" />
+          <Property Name="CIP16CERT4" Type="float" />
+          <Property Name="CIP16BACHL" Type="float" />
+          <Property Name="CIP19CERT1" Type="float" />
+          <Property Name="CIP19CERT2" Type="float" />
+          <Property Name="CIP19ASSOC" Type="float" />
+          <Property Name="CIP19CERT4" Type="float" />
+          <Property Name="CIP19BACHL" Type="float" />
+          <Property Name="CIP22CERT1" Type="float" />
+          <Property Name="CIP22CERT2" Type="float" />
+          <Property Name="CIP22ASSOC" Type="float" />
+          <Property Name="CIP22CERT4" Type="float" />
+          <Property Name="CIP22BACHL" Type="float" />
+          <Property Name="CIP23CERT1" Type="float" />
+          <Property Name="CIP23CERT2" Type="float" />
+          <Property Name="CIP23ASSOC" Type="float" />
+          <Property Name="CIP23CERT4" Type="float" />
+          <Property Name="CIP23BACHL" Type="float" />
+          <Property Name="CIP24CERT1" Type="float" />
+          <Property Name="CIP24CERT2" Type="float" />
+          <Property Name="CIP24ASSOC" Type="float" />
+          <Property Name="CIP24CERT4" Type="float" />
+          <Property Name="CIP24BACHL" Type="float" />
+          <Property Name="CIP25CERT1" Type="float" />
+          <Property Name="CIP25CERT2" Type="float" />
+          <Property Name="CIP25ASSOC" Type="float" />
+          <Property Name="CIP25CERT4" Type="float" />
+          <Property Name="CIP25BACHL" Type="float" />
+          <Property Name="CIP26CERT1" Type="float" />
+          <Property Name="CIP26CERT2" Type="float" />
+          <Property Name="CIP26ASSOC" Type="float" />
+          <Property Name="CIP26CERT4" Type="float" />
+          <Property Name="CIP26BACHL" Type="float" />
+          <Property Name="CIP27CERT1" Type="float" />
+          <Property Name="CIP27CERT2" Type="float" />
+          <Property Name="CIP27ASSOC" Type="float" />
+          <Property Name="CIP27CERT4" Type="float" />
+          <Property Name="CIP27BACHL" Type="float" />
+          <Property Name="CIP29CERT1" Type="float" />
+          <Property Name="CIP29CERT2" Type="float" />
+          <Property Name="CIP29ASSOC" Type="float" />
+          <Property Name="CIP29CERT4" Type="float" />
+          <Property Name="CIP29BACHL" Type="float" />
+          <Property Name="CIP30CERT1" Type="float" />
+          <Property Name="CIP30CERT2" Type="float" />
+          <Property Name="CIP30ASSOC" Type="float" />
+          <Property Name="CIP30CERT4" Type="float" />
+          <Property Name="CIP30BACHL" Type="float" />
+          <Property Name="CIP31CERT1" Type="float" />
+          <Property Name="CIP31CERT2" Type="float" />
+          <Property Name="CIP31ASSOC" Type="float" />
+          <Property Name="CIP31CERT4" Type="float" />
+          <Property Name="CIP31BACHL" Type="float" />
+          <Property Name="CIP38CERT1" Type="float" />
+          <Property Name="CIP38CERT2" Type="float" />
+          <Property Name="CIP38ASSOC" Type="float" />
+          <Property Name="CIP38CERT4" Type="float" />
+          <Property Name="CIP38BACHL" Type="float" />
+          <Property Name="CIP39CERT1" Type="float" />
+          <Property Name="CIP39CERT2" Type="float" />
+          <Property Name="CIP39ASSOC" Type="float" />
+          <Property Name="CIP39CERT4" Type="float" />
+          <Property Name="CIP39BACHL" Type="float" />
+          <Property Name="CIP40CERT1" Type="float" />
+          <Property Name="CIP40CERT2" Type="float" />
+          <Property Name="CIP40ASSOC" Type="float" />
+          <Property Name="CIP40CERT4" Type="float" />
+          <Property Name="CIP40BACHL" Type="float" />
+          <Property Name="CIP41CERT1" Type="float" />
+          <Property Name="CIP41CERT2" Type="float" />
+          <Property Name="CIP41ASSOC" Type="float" />
+          <Property Name="CIP41CERT4" Type="float" />
+          <Property Name="CIP41BACHL" Type="float" />
+          <Property Name="CIP42CERT1" Type="float" />
+          <Property Name="CIP42CERT2" Type="float" />
+          <Property Name="CIP42ASSOC" Type="float" />
+          <Property Name="CIP42CERT4" Type="float" />
+          <Property Name="CIP42BACHL" Type="float" />
+          <Property Name="CIP43CERT1" Type="float" />
+          <Property Name="CIP43CERT2" Type="float" />
+          <Property Name="CIP43ASSOC" Type="float" />
+          <Property Name="CIP43CERT4" Type="float" />
+          <Property Name="CIP43BACHL" Type="float" />
+          <Property Name="CIP44CERT1" Type="float" />
+          <Property Name="CIP44CERT2" Type="float" />
+          <Property Name="CIP44ASSOC" Type="float" />
+          <Property Name="CIP44CERT4" Type="float" />
+          <Property Name="CIP44BACHL" Type="float" />
+          <Property Name="CIP45CERT1" Type="float" />
+          <Property Name="CIP45CERT2" Type="float" />
+          <Property Name="CIP45ASSOC" Type="float" />
+          <Property Name="CIP45CERT4" Type="float" />
+          <Property Name="CIP45BACHL" Type="float" />
+          <Property Name="CIP46CERT1" Type="float" />
+          <Property Name="CIP46CERT2" Type="float" />
+          <Property Name="CIP46ASSOC" Type="float" />
+          <Property Name="CIP46CERT4" Type="float" />
+          <Property Name="CIP46BACHL" Type="float" />
+          <Property Name="CIP47CERT1" Type="float" />
+          <Property Name="CIP47CERT2" Type="float" />
+        </EntityType>
+        <EntityContainer Name="TestDB_UpdatedModelStoreContainer">
+          <EntitySet Name="MERGED_Data" EntityType="Self.MERGED_Data" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestDB_UpdatedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TestDB_UpdatedEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="MERGED_Data" EntityType="TestDB_UpdatedModel.MERGED_Data" />
+        </EntityContainer>
+        <EntityType Name="MERGED_Data">
+          <Key>
+            <PropertyRef Name="UNITID" />
+          </Key>
+          <Property Name="UNITID" Type="Double" Nullable="false" />
+          <Property Name="OPEID" Type="Double" />
+          <Property Name="OPEID6" Type="Double" />
+          <Property Name="INSTNM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STABBR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ZIP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACCREDAGENCY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="INSTURL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NPCURL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SCH_DEG" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HCM2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MAIN" Type="Double" />
+          <Property Name="NUMBRANCH" Type="Double" />
+          <Property Name="PREDDEG" Type="Double" />
+          <Property Name="HIGHDEG" Type="Double" />
+          <Property Name="CONTROL" Type="Double" />
+          <Property Name="ST_FIPS" Type="Double" />
+          <Property Name="REGION" Type="Double" />
+          <Property Name="LOCALE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LOCALE2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LATITUDE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LONGITUDE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CCBASIC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CCUGPROF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CCSIZSET" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HBCU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PBI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ANNHI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TRIBAL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AANAPII" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HSI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NANTI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MENONLY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WOMENONLY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RELAFFIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ADM_RATE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ADM_RATE_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATVR25" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATVR75" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATMT25" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATMT75" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATWR25" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATWR75" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATVRMID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATMTMID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SATWRMID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTCM25" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTCM75" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTEN25" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTEN75" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTMT25" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTMT75" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTWR25" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTWR75" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTCMMID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTENMID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTMTMID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACTWRMID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAT_AVG" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAT_AVG_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PCIP01" Type="Double" />
+          <Property Name="PCIP03" Type="Double" />
+          <Property Name="PCIP04" Type="Double" />
+          <Property Name="PCIP05" Type="Double" />
+          <Property Name="PCIP09" Type="Double" />
+          <Property Name="PCIP10" Type="Double" />
+          <Property Name="PCIP11" Type="Double" />
+          <Property Name="PCIP12" Type="Double" />
+          <Property Name="PCIP13" Type="Double" />
+          <Property Name="PCIP14" Type="Double" />
+          <Property Name="PCIP15" Type="Double" />
+          <Property Name="PCIP16" Type="Double" />
+          <Property Name="PCIP19" Type="Double" />
+          <Property Name="PCIP22" Type="Double" />
+          <Property Name="PCIP23" Type="Double" />
+          <Property Name="PCIP24" Type="Double" />
+          <Property Name="PCIP25" Type="Double" />
+          <Property Name="PCIP26" Type="Double" />
+          <Property Name="PCIP27" Type="Double" />
+          <Property Name="PCIP29" Type="Double" />
+          <Property Name="PCIP30" Type="Double" />
+          <Property Name="PCIP31" Type="Double" />
+          <Property Name="PCIP38" Type="Double" />
+          <Property Name="PCIP39" Type="Double" />
+          <Property Name="PCIP40" Type="Double" />
+          <Property Name="PCIP41" Type="Double" />
+          <Property Name="PCIP42" Type="Double" />
+          <Property Name="PCIP43" Type="Double" />
+          <Property Name="PCIP44" Type="Double" />
+          <Property Name="PCIP45" Type="Double" />
+          <Property Name="PCIP46" Type="Double" />
+          <Property Name="PCIP47" Type="Double" />
+          <Property Name="PCIP48" Type="Double" />
+          <Property Name="PCIP49" Type="Double" />
+          <Property Name="PCIP50" Type="Double" />
+          <Property Name="PCIP51" Type="Double" />
+          <Property Name="PCIP52" Type="Double" />
+          <Property Name="PCIP54" Type="Double" />
+          <Property Name="CIP01CERT1" Type="Double" />
+          <Property Name="CIP01CERT2" Type="Double" />
+          <Property Name="CIP01ASSOC" Type="Double" />
+          <Property Name="CIP01CERT4" Type="Double" />
+          <Property Name="CIP01BACHL" Type="Double" />
+          <Property Name="CIP03CERT1" Type="Double" />
+          <Property Name="CIP03CERT2" Type="Double" />
+          <Property Name="CIP03ASSOC" Type="Double" />
+          <Property Name="CIP03CERT4" Type="Double" />
+          <Property Name="CIP03BACHL" Type="Double" />
+          <Property Name="CIP04CERT1" Type="Double" />
+          <Property Name="CIP04CERT2" Type="Double" />
+          <Property Name="CIP04ASSOC" Type="Double" />
+          <Property Name="CIP04CERT4" Type="Double" />
+          <Property Name="CIP04BACHL" Type="Double" />
+          <Property Name="CIP05CERT1" Type="Double" />
+          <Property Name="CIP05CERT2" Type="Double" />
+          <Property Name="CIP05ASSOC" Type="Double" />
+          <Property Name="CIP05CERT4" Type="Double" />
+          <Property Name="CIP05BACHL" Type="Double" />
+          <Property Name="CIP09CERT1" Type="Double" />
+          <Property Name="CIP09CERT2" Type="Double" />
+          <Property Name="CIP09ASSOC" Type="Double" />
+          <Property Name="CIP09CERT4" Type="Double" />
+          <Property Name="CIP09BACHL" Type="Double" />
+          <Property Name="CIP10CERT1" Type="Double" />
+          <Property Name="CIP10CERT2" Type="Double" />
+          <Property Name="CIP10ASSOC" Type="Double" />
+          <Property Name="CIP10CERT4" Type="Double" />
+          <Property Name="CIP10BACHL" Type="Double" />
+          <Property Name="CIP11CERT1" Type="Double" />
+          <Property Name="CIP11CERT2" Type="Double" />
+          <Property Name="CIP11ASSOC" Type="Double" />
+          <Property Name="CIP11CERT4" Type="Double" />
+          <Property Name="CIP11BACHL" Type="Double" />
+          <Property Name="CIP12CERT1" Type="Double" />
+          <Property Name="CIP12CERT2" Type="Double" />
+          <Property Name="CIP12ASSOC" Type="Double" />
+          <Property Name="CIP12CERT4" Type="Double" />
+          <Property Name="CIP12BACHL" Type="Double" />
+          <Property Name="CIP13CERT1" Type="Double" />
+          <Property Name="CIP13CERT2" Type="Double" />
+          <Property Name="CIP13ASSOC" Type="Double" />
+          <Property Name="CIP13CERT4" Type="Double" />
+          <Property Name="CIP13BACHL" Type="Double" />
+          <Property Name="CIP14CERT1" Type="Double" />
+          <Property Name="CIP14CERT2" Type="Double" />
+          <Property Name="CIP14ASSOC" Type="Double" />
+          <Property Name="CIP14CERT4" Type="Double" />
+          <Property Name="CIP14BACHL" Type="Double" />
+          <Property Name="CIP15CERT1" Type="Double" />
+          <Property Name="CIP15CERT2" Type="Double" />
+          <Property Name="CIP15ASSOC" Type="Double" />
+          <Property Name="CIP15CERT4" Type="Double" />
+          <Property Name="CIP15BACHL" Type="Double" />
+          <Property Name="CIP16CERT1" Type="Double" />
+          <Property Name="CIP16CERT2" Type="Double" />
+          <Property Name="CIP16ASSOC" Type="Double" />
+          <Property Name="CIP16CERT4" Type="Double" />
+          <Property Name="CIP16BACHL" Type="Double" />
+          <Property Name="CIP19CERT1" Type="Double" />
+          <Property Name="CIP19CERT2" Type="Double" />
+          <Property Name="CIP19ASSOC" Type="Double" />
+          <Property Name="CIP19CERT4" Type="Double" />
+          <Property Name="CIP19BACHL" Type="Double" />
+          <Property Name="CIP22CERT1" Type="Double" />
+          <Property Name="CIP22CERT2" Type="Double" />
+          <Property Name="CIP22ASSOC" Type="Double" />
+          <Property Name="CIP22CERT4" Type="Double" />
+          <Property Name="CIP22BACHL" Type="Double" />
+          <Property Name="CIP23CERT1" Type="Double" />
+          <Property Name="CIP23CERT2" Type="Double" />
+          <Property Name="CIP23ASSOC" Type="Double" />
+          <Property Name="CIP23CERT4" Type="Double" />
+          <Property Name="CIP23BACHL" Type="Double" />
+          <Property Name="CIP24CERT1" Type="Double" />
+          <Property Name="CIP24CERT2" Type="Double" />
+          <Property Name="CIP24ASSOC" Type="Double" />
+          <Property Name="CIP24CERT4" Type="Double" />
+          <Property Name="CIP24BACHL" Type="Double" />
+          <Property Name="CIP25CERT1" Type="Double" />
+          <Property Name="CIP25CERT2" Type="Double" />
+          <Property Name="CIP25ASSOC" Type="Double" />
+          <Property Name="CIP25CERT4" Type="Double" />
+          <Property Name="CIP25BACHL" Type="Double" />
+          <Property Name="CIP26CERT1" Type="Double" />
+          <Property Name="CIP26CERT2" Type="Double" />
+          <Property Name="CIP26ASSOC" Type="Double" />
+          <Property Name="CIP26CERT4" Type="Double" />
+          <Property Name="CIP26BACHL" Type="Double" />
+          <Property Name="CIP27CERT1" Type="Double" />
+          <Property Name="CIP27CERT2" Type="Double" />
+          <Property Name="CIP27ASSOC" Type="Double" />
+          <Property Name="CIP27CERT4" Type="Double" />
+          <Property Name="CIP27BACHL" Type="Double" />
+          <Property Name="CIP29CERT1" Type="Double" />
+          <Property Name="CIP29CERT2" Type="Double" />
+          <Property Name="CIP29ASSOC" Type="Double" />
+          <Property Name="CIP29CERT4" Type="Double" />
+          <Property Name="CIP29BACHL" Type="Double" />
+          <Property Name="CIP30CERT1" Type="Double" />
+          <Property Name="CIP30CERT2" Type="Double" />
+          <Property Name="CIP30ASSOC" Type="Double" />
+          <Property Name="CIP30CERT4" Type="Double" />
+          <Property Name="CIP30BACHL" Type="Double" />
+          <Property Name="CIP31CERT1" Type="Double" />
+          <Property Name="CIP31CERT2" Type="Double" />
+          <Property Name="CIP31ASSOC" Type="Double" />
+          <Property Name="CIP31CERT4" Type="Double" />
+          <Property Name="CIP31BACHL" Type="Double" />
+          <Property Name="CIP38CERT1" Type="Double" />
+          <Property Name="CIP38CERT2" Type="Double" />
+          <Property Name="CIP38ASSOC" Type="Double" />
+          <Property Name="CIP38CERT4" Type="Double" />
+          <Property Name="CIP38BACHL" Type="Double" />
+          <Property Name="CIP39CERT1" Type="Double" />
+          <Property Name="CIP39CERT2" Type="Double" />
+          <Property Name="CIP39ASSOC" Type="Double" />
+          <Property Name="CIP39CERT4" Type="Double" />
+          <Property Name="CIP39BACHL" Type="Double" />
+          <Property Name="CIP40CERT1" Type="Double" />
+          <Property Name="CIP40CERT2" Type="Double" />
+          <Property Name="CIP40ASSOC" Type="Double" />
+          <Property Name="CIP40CERT4" Type="Double" />
+          <Property Name="CIP40BACHL" Type="Double" />
+          <Property Name="CIP41CERT1" Type="Double" />
+          <Property Name="CIP41CERT2" Type="Double" />
+          <Property Name="CIP41ASSOC" Type="Double" />
+          <Property Name="CIP41CERT4" Type="Double" />
+          <Property Name="CIP41BACHL" Type="Double" />
+          <Property Name="CIP42CERT1" Type="Double" />
+          <Property Name="CIP42CERT2" Type="Double" />
+          <Property Name="CIP42ASSOC" Type="Double" />
+          <Property Name="CIP42CERT4" Type="Double" />
+          <Property Name="CIP42BACHL" Type="Double" />
+          <Property Name="CIP43CERT1" Type="Double" />
+          <Property Name="CIP43CERT2" Type="Double" />
+          <Property Name="CIP43ASSOC" Type="Double" />
+          <Property Name="CIP43CERT4" Type="Double" />
+          <Property Name="CIP43BACHL" Type="Double" />
+          <Property Name="CIP44CERT1" Type="Double" />
+          <Property Name="CIP44CERT2" Type="Double" />
+          <Property Name="CIP44ASSOC" Type="Double" />
+          <Property Name="CIP44CERT4" Type="Double" />
+          <Property Name="CIP44BACHL" Type="Double" />
+          <Property Name="CIP45CERT1" Type="Double" />
+          <Property Name="CIP45CERT2" Type="Double" />
+          <Property Name="CIP45ASSOC" Type="Double" />
+          <Property Name="CIP45CERT4" Type="Double" />
+          <Property Name="CIP45BACHL" Type="Double" />
+          <Property Name="CIP46CERT1" Type="Double" />
+          <Property Name="CIP46CERT2" Type="Double" />
+          <Property Name="CIP46ASSOC" Type="Double" />
+          <Property Name="CIP46CERT4" Type="Double" />
+          <Property Name="CIP46BACHL" Type="Double" />
+          <Property Name="CIP47CERT1" Type="Double" />
+          <Property Name="CIP47CERT2" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestDB_UpdatedModelStoreContainer" CdmEntityContainer="TestDB_UpdatedEntities" >
+          <EntitySetMapping Name="MERGED_Data">
+            <EntityTypeMapping TypeName="TestDB_UpdatedModel.MERGED_Data">
+              <MappingFragment StoreEntitySet="MERGED_Data">
+                <ScalarProperty Name="CIP47CERT2" ColumnName="CIP47CERT2" />
+                <ScalarProperty Name="CIP47CERT1" ColumnName="CIP47CERT1" />
+                <ScalarProperty Name="CIP46BACHL" ColumnName="CIP46BACHL" />
+                <ScalarProperty Name="CIP46CERT4" ColumnName="CIP46CERT4" />
+                <ScalarProperty Name="CIP46ASSOC" ColumnName="CIP46ASSOC" />
+                <ScalarProperty Name="CIP46CERT2" ColumnName="CIP46CERT2" />
+                <ScalarProperty Name="CIP46CERT1" ColumnName="CIP46CERT1" />
+                <ScalarProperty Name="CIP45BACHL" ColumnName="CIP45BACHL" />
+                <ScalarProperty Name="CIP45CERT4" ColumnName="CIP45CERT4" />
+                <ScalarProperty Name="CIP45ASSOC" ColumnName="CIP45ASSOC" />
+                <ScalarProperty Name="CIP45CERT2" ColumnName="CIP45CERT2" />
+                <ScalarProperty Name="CIP45CERT1" ColumnName="CIP45CERT1" />
+                <ScalarProperty Name="CIP44BACHL" ColumnName="CIP44BACHL" />
+                <ScalarProperty Name="CIP44CERT4" ColumnName="CIP44CERT4" />
+                <ScalarProperty Name="CIP44ASSOC" ColumnName="CIP44ASSOC" />
+                <ScalarProperty Name="CIP44CERT2" ColumnName="CIP44CERT2" />
+                <ScalarProperty Name="CIP44CERT1" ColumnName="CIP44CERT1" />
+                <ScalarProperty Name="CIP43BACHL" ColumnName="CIP43BACHL" />
+                <ScalarProperty Name="CIP43CERT4" ColumnName="CIP43CERT4" />
+                <ScalarProperty Name="CIP43ASSOC" ColumnName="CIP43ASSOC" />
+                <ScalarProperty Name="CIP43CERT2" ColumnName="CIP43CERT2" />
+                <ScalarProperty Name="CIP43CERT1" ColumnName="CIP43CERT1" />
+                <ScalarProperty Name="CIP42BACHL" ColumnName="CIP42BACHL" />
+                <ScalarProperty Name="CIP42CERT4" ColumnName="CIP42CERT4" />
+                <ScalarProperty Name="CIP42ASSOC" ColumnName="CIP42ASSOC" />
+                <ScalarProperty Name="CIP42CERT2" ColumnName="CIP42CERT2" />
+                <ScalarProperty Name="CIP42CERT1" ColumnName="CIP42CERT1" />
+                <ScalarProperty Name="CIP41BACHL" ColumnName="CIP41BACHL" />
+                <ScalarProperty Name="CIP41CERT4" ColumnName="CIP41CERT4" />
+                <ScalarProperty Name="CIP41ASSOC" ColumnName="CIP41ASSOC" />
+                <ScalarProperty Name="CIP41CERT2" ColumnName="CIP41CERT2" />
+                <ScalarProperty Name="CIP41CERT1" ColumnName="CIP41CERT1" />
+                <ScalarProperty Name="CIP40BACHL" ColumnName="CIP40BACHL" />
+                <ScalarProperty Name="CIP40CERT4" ColumnName="CIP40CERT4" />
+                <ScalarProperty Name="CIP40ASSOC" ColumnName="CIP40ASSOC" />
+                <ScalarProperty Name="CIP40CERT2" ColumnName="CIP40CERT2" />
+                <ScalarProperty Name="CIP40CERT1" ColumnName="CIP40CERT1" />
+                <ScalarProperty Name="CIP39BACHL" ColumnName="CIP39BACHL" />
+                <ScalarProperty Name="CIP39CERT4" ColumnName="CIP39CERT4" />
+                <ScalarProperty Name="CIP39ASSOC" ColumnName="CIP39ASSOC" />
+                <ScalarProperty Name="CIP39CERT2" ColumnName="CIP39CERT2" />
+                <ScalarProperty Name="CIP39CERT1" ColumnName="CIP39CERT1" />
+                <ScalarProperty Name="CIP38BACHL" ColumnName="CIP38BACHL" />
+                <ScalarProperty Name="CIP38CERT4" ColumnName="CIP38CERT4" />
+                <ScalarProperty Name="CIP38ASSOC" ColumnName="CIP38ASSOC" />
+                <ScalarProperty Name="CIP38CERT2" ColumnName="CIP38CERT2" />
+                <ScalarProperty Name="CIP38CERT1" ColumnName="CIP38CERT1" />
+                <ScalarProperty Name="CIP31BACHL" ColumnName="CIP31BACHL" />
+                <ScalarProperty Name="CIP31CERT4" ColumnName="CIP31CERT4" />
+                <ScalarProperty Name="CIP31ASSOC" ColumnName="CIP31ASSOC" />
+                <ScalarProperty Name="CIP31CERT2" ColumnName="CIP31CERT2" />
+                <ScalarProperty Name="CIP31CERT1" ColumnName="CIP31CERT1" />
+                <ScalarProperty Name="CIP30BACHL" ColumnName="CIP30BACHL" />
+                <ScalarProperty Name="CIP30CERT4" ColumnName="CIP30CERT4" />
+                <ScalarProperty Name="CIP30ASSOC" ColumnName="CIP30ASSOC" />
+                <ScalarProperty Name="CIP30CERT2" ColumnName="CIP30CERT2" />
+                <ScalarProperty Name="CIP30CERT1" ColumnName="CIP30CERT1" />
+                <ScalarProperty Name="CIP29BACHL" ColumnName="CIP29BACHL" />
+                <ScalarProperty Name="CIP29CERT4" ColumnName="CIP29CERT4" />
+                <ScalarProperty Name="CIP29ASSOC" ColumnName="CIP29ASSOC" />
+                <ScalarProperty Name="CIP29CERT2" ColumnName="CIP29CERT2" />
+                <ScalarProperty Name="CIP29CERT1" ColumnName="CIP29CERT1" />
+                <ScalarProperty Name="CIP27BACHL" ColumnName="CIP27BACHL" />
+                <ScalarProperty Name="CIP27CERT4" ColumnName="CIP27CERT4" />
+                <ScalarProperty Name="CIP27ASSOC" ColumnName="CIP27ASSOC" />
+                <ScalarProperty Name="CIP27CERT2" ColumnName="CIP27CERT2" />
+                <ScalarProperty Name="CIP27CERT1" ColumnName="CIP27CERT1" />
+                <ScalarProperty Name="CIP26BACHL" ColumnName="CIP26BACHL" />
+                <ScalarProperty Name="CIP26CERT4" ColumnName="CIP26CERT4" />
+                <ScalarProperty Name="CIP26ASSOC" ColumnName="CIP26ASSOC" />
+                <ScalarProperty Name="CIP26CERT2" ColumnName="CIP26CERT2" />
+                <ScalarProperty Name="CIP26CERT1" ColumnName="CIP26CERT1" />
+                <ScalarProperty Name="CIP25BACHL" ColumnName="CIP25BACHL" />
+                <ScalarProperty Name="CIP25CERT4" ColumnName="CIP25CERT4" />
+                <ScalarProperty Name="CIP25ASSOC" ColumnName="CIP25ASSOC" />
+                <ScalarProperty Name="CIP25CERT2" ColumnName="CIP25CERT2" />
+                <ScalarProperty Name="CIP25CERT1" ColumnName="CIP25CERT1" />
+                <ScalarProperty Name="CIP24BACHL" ColumnName="CIP24BACHL" />
+                <ScalarProperty Name="CIP24CERT4" ColumnName="CIP24CERT4" />
+                <ScalarProperty Name="CIP24ASSOC" ColumnName="CIP24ASSOC" />
+                <ScalarProperty Name="CIP24CERT2" ColumnName="CIP24CERT2" />
+                <ScalarProperty Name="CIP24CERT1" ColumnName="CIP24CERT1" />
+                <ScalarProperty Name="CIP23BACHL" ColumnName="CIP23BACHL" />
+                <ScalarProperty Name="CIP23CERT4" ColumnName="CIP23CERT4" />
+                <ScalarProperty Name="CIP23ASSOC" ColumnName="CIP23ASSOC" />
+                <ScalarProperty Name="CIP23CERT2" ColumnName="CIP23CERT2" />
+                <ScalarProperty Name="CIP23CERT1" ColumnName="CIP23CERT1" />
+                <ScalarProperty Name="CIP22BACHL" ColumnName="CIP22BACHL" />
+                <ScalarProperty Name="CIP22CERT4" ColumnName="CIP22CERT4" />
+                <ScalarProperty Name="CIP22ASSOC" ColumnName="CIP22ASSOC" />
+                <ScalarProperty Name="CIP22CERT2" ColumnName="CIP22CERT2" />
+                <ScalarProperty Name="CIP22CERT1" ColumnName="CIP22CERT1" />
+                <ScalarProperty Name="CIP19BACHL" ColumnName="CIP19BACHL" />
+                <ScalarProperty Name="CIP19CERT4" ColumnName="CIP19CERT4" />
+                <ScalarProperty Name="CIP19ASSOC" ColumnName="CIP19ASSOC" />
+                <ScalarProperty Name="CIP19CERT2" ColumnName="CIP19CERT2" />
+                <ScalarProperty Name="CIP19CERT1" ColumnName="CIP19CERT1" />
+                <ScalarProperty Name="CIP16BACHL" ColumnName="CIP16BACHL" />
+                <ScalarProperty Name="CIP16CERT4" ColumnName="CIP16CERT4" />
+                <ScalarProperty Name="CIP16ASSOC" ColumnName="CIP16ASSOC" />
+                <ScalarProperty Name="CIP16CERT2" ColumnName="CIP16CERT2" />
+                <ScalarProperty Name="CIP16CERT1" ColumnName="CIP16CERT1" />
+                <ScalarProperty Name="CIP15BACHL" ColumnName="CIP15BACHL" />
+                <ScalarProperty Name="CIP15CERT4" ColumnName="CIP15CERT4" />
+                <ScalarProperty Name="CIP15ASSOC" ColumnName="CIP15ASSOC" />
+                <ScalarProperty Name="CIP15CERT2" ColumnName="CIP15CERT2" />
+                <ScalarProperty Name="CIP15CERT1" ColumnName="CIP15CERT1" />
+                <ScalarProperty Name="CIP14BACHL" ColumnName="CIP14BACHL" />
+                <ScalarProperty Name="CIP14CERT4" ColumnName="CIP14CERT4" />
+                <ScalarProperty Name="CIP14ASSOC" ColumnName="CIP14ASSOC" />
+                <ScalarProperty Name="CIP14CERT2" ColumnName="CIP14CERT2" />
+                <ScalarProperty Name="CIP14CERT1" ColumnName="CIP14CERT1" />
+                <ScalarProperty Name="CIP13BACHL" ColumnName="CIP13BACHL" />
+                <ScalarProperty Name="CIP13CERT4" ColumnName="CIP13CERT4" />
+                <ScalarProperty Name="CIP13ASSOC" ColumnName="CIP13ASSOC" />
+                <ScalarProperty Name="CIP13CERT2" ColumnName="CIP13CERT2" />
+                <ScalarProperty Name="CIP13CERT1" ColumnName="CIP13CERT1" />
+                <ScalarProperty Name="CIP12BACHL" ColumnName="CIP12BACHL" />
+                <ScalarProperty Name="CIP12CERT4" ColumnName="CIP12CERT4" />
+                <ScalarProperty Name="CIP12ASSOC" ColumnName="CIP12ASSOC" />
+                <ScalarProperty Name="CIP12CERT2" ColumnName="CIP12CERT2" />
+                <ScalarProperty Name="CIP12CERT1" ColumnName="CIP12CERT1" />
+                <ScalarProperty Name="CIP11BACHL" ColumnName="CIP11BACHL" />
+                <ScalarProperty Name="CIP11CERT4" ColumnName="CIP11CERT4" />
+                <ScalarProperty Name="CIP11ASSOC" ColumnName="CIP11ASSOC" />
+                <ScalarProperty Name="CIP11CERT2" ColumnName="CIP11CERT2" />
+                <ScalarProperty Name="CIP11CERT1" ColumnName="CIP11CERT1" />
+                <ScalarProperty Name="CIP10BACHL" ColumnName="CIP10BACHL" />
+                <ScalarProperty Name="CIP10CERT4" ColumnName="CIP10CERT4" />
+                <ScalarProperty Name="CIP10ASSOC" ColumnName="CIP10ASSOC" />
+                <ScalarProperty Name="CIP10CERT2" ColumnName="CIP10CERT2" />
+                <ScalarProperty Name="CIP10CERT1" ColumnName="CIP10CERT1" />
+                <ScalarProperty Name="CIP09BACHL" ColumnName="CIP09BACHL" />
+                <ScalarProperty Name="CIP09CERT4" ColumnName="CIP09CERT4" />
+                <ScalarProperty Name="CIP09ASSOC" ColumnName="CIP09ASSOC" />
+                <ScalarProperty Name="CIP09CERT2" ColumnName="CIP09CERT2" />
+                <ScalarProperty Name="CIP09CERT1" ColumnName="CIP09CERT1" />
+                <ScalarProperty Name="CIP05BACHL" ColumnName="CIP05BACHL" />
+                <ScalarProperty Name="CIP05CERT4" ColumnName="CIP05CERT4" />
+                <ScalarProperty Name="CIP05ASSOC" ColumnName="CIP05ASSOC" />
+                <ScalarProperty Name="CIP05CERT2" ColumnName="CIP05CERT2" />
+                <ScalarProperty Name="CIP05CERT1" ColumnName="CIP05CERT1" />
+                <ScalarProperty Name="CIP04BACHL" ColumnName="CIP04BACHL" />
+                <ScalarProperty Name="CIP04CERT4" ColumnName="CIP04CERT4" />
+                <ScalarProperty Name="CIP04ASSOC" ColumnName="CIP04ASSOC" />
+                <ScalarProperty Name="CIP04CERT2" ColumnName="CIP04CERT2" />
+                <ScalarProperty Name="CIP04CERT1" ColumnName="CIP04CERT1" />
+                <ScalarProperty Name="CIP03BACHL" ColumnName="CIP03BACHL" />
+                <ScalarProperty Name="CIP03CERT4" ColumnName="CIP03CERT4" />
+                <ScalarProperty Name="CIP03ASSOC" ColumnName="CIP03ASSOC" />
+                <ScalarProperty Name="CIP03CERT2" ColumnName="CIP03CERT2" />
+                <ScalarProperty Name="CIP03CERT1" ColumnName="CIP03CERT1" />
+                <ScalarProperty Name="CIP01BACHL" ColumnName="CIP01BACHL" />
+                <ScalarProperty Name="CIP01CERT4" ColumnName="CIP01CERT4" />
+                <ScalarProperty Name="CIP01ASSOC" ColumnName="CIP01ASSOC" />
+                <ScalarProperty Name="CIP01CERT2" ColumnName="CIP01CERT2" />
+                <ScalarProperty Name="CIP01CERT1" ColumnName="CIP01CERT1" />
+                <ScalarProperty Name="PCIP54" ColumnName="PCIP54" />
+                <ScalarProperty Name="PCIP52" ColumnName="PCIP52" />
+                <ScalarProperty Name="PCIP51" ColumnName="PCIP51" />
+                <ScalarProperty Name="PCIP50" ColumnName="PCIP50" />
+                <ScalarProperty Name="PCIP49" ColumnName="PCIP49" />
+                <ScalarProperty Name="PCIP48" ColumnName="PCIP48" />
+                <ScalarProperty Name="PCIP47" ColumnName="PCIP47" />
+                <ScalarProperty Name="PCIP46" ColumnName="PCIP46" />
+                <ScalarProperty Name="PCIP45" ColumnName="PCIP45" />
+                <ScalarProperty Name="PCIP44" ColumnName="PCIP44" />
+                <ScalarProperty Name="PCIP43" ColumnName="PCIP43" />
+                <ScalarProperty Name="PCIP42" ColumnName="PCIP42" />
+                <ScalarProperty Name="PCIP41" ColumnName="PCIP41" />
+                <ScalarProperty Name="PCIP40" ColumnName="PCIP40" />
+                <ScalarProperty Name="PCIP39" ColumnName="PCIP39" />
+                <ScalarProperty Name="PCIP38" ColumnName="PCIP38" />
+                <ScalarProperty Name="PCIP31" ColumnName="PCIP31" />
+                <ScalarProperty Name="PCIP30" ColumnName="PCIP30" />
+                <ScalarProperty Name="PCIP29" ColumnName="PCIP29" />
+                <ScalarProperty Name="PCIP27" ColumnName="PCIP27" />
+                <ScalarProperty Name="PCIP26" ColumnName="PCIP26" />
+                <ScalarProperty Name="PCIP25" ColumnName="PCIP25" />
+                <ScalarProperty Name="PCIP24" ColumnName="PCIP24" />
+                <ScalarProperty Name="PCIP23" ColumnName="PCIP23" />
+                <ScalarProperty Name="PCIP22" ColumnName="PCIP22" />
+                <ScalarProperty Name="PCIP19" ColumnName="PCIP19" />
+                <ScalarProperty Name="PCIP16" ColumnName="PCIP16" />
+                <ScalarProperty Name="PCIP15" ColumnName="PCIP15" />
+                <ScalarProperty Name="PCIP14" ColumnName="PCIP14" />
+                <ScalarProperty Name="PCIP13" ColumnName="PCIP13" />
+                <ScalarProperty Name="PCIP12" ColumnName="PCIP12" />
+                <ScalarProperty Name="PCIP11" ColumnName="PCIP11" />
+                <ScalarProperty Name="PCIP10" ColumnName="PCIP10" />
+                <ScalarProperty Name="PCIP09" ColumnName="PCIP09" />
+                <ScalarProperty Name="PCIP05" ColumnName="PCIP05" />
+                <ScalarProperty Name="PCIP04" ColumnName="PCIP04" />
+                <ScalarProperty Name="PCIP03" ColumnName="PCIP03" />
+                <ScalarProperty Name="PCIP01" ColumnName="PCIP01" />
+                <ScalarProperty Name="SAT_AVG_ALL" ColumnName="SAT_AVG_ALL" />
+                <ScalarProperty Name="SAT_AVG" ColumnName="SAT_AVG" />
+                <ScalarProperty Name="ACTWRMID" ColumnName="ACTWRMID" />
+                <ScalarProperty Name="ACTMTMID" ColumnName="ACTMTMID" />
+                <ScalarProperty Name="ACTENMID" ColumnName="ACTENMID" />
+                <ScalarProperty Name="ACTCMMID" ColumnName="ACTCMMID" />
+                <ScalarProperty Name="ACTWR75" ColumnName="ACTWR75" />
+                <ScalarProperty Name="ACTWR25" ColumnName="ACTWR25" />
+                <ScalarProperty Name="ACTMT75" ColumnName="ACTMT75" />
+                <ScalarProperty Name="ACTMT25" ColumnName="ACTMT25" />
+                <ScalarProperty Name="ACTEN75" ColumnName="ACTEN75" />
+                <ScalarProperty Name="ACTEN25" ColumnName="ACTEN25" />
+                <ScalarProperty Name="ACTCM75" ColumnName="ACTCM75" />
+                <ScalarProperty Name="ACTCM25" ColumnName="ACTCM25" />
+                <ScalarProperty Name="SATWRMID" ColumnName="SATWRMID" />
+                <ScalarProperty Name="SATMTMID" ColumnName="SATMTMID" />
+                <ScalarProperty Name="SATVRMID" ColumnName="SATVRMID" />
+                <ScalarProperty Name="SATWR75" ColumnName="SATWR75" />
+                <ScalarProperty Name="SATWR25" ColumnName="SATWR25" />
+                <ScalarProperty Name="SATMT75" ColumnName="SATMT75" />
+                <ScalarProperty Name="SATMT25" ColumnName="SATMT25" />
+                <ScalarProperty Name="SATVR75" ColumnName="SATVR75" />
+                <ScalarProperty Name="SATVR25" ColumnName="SATVR25" />
+                <ScalarProperty Name="ADM_RATE_ALL" ColumnName="ADM_RATE_ALL" />
+                <ScalarProperty Name="ADM_RATE" ColumnName="ADM_RATE" />
+                <ScalarProperty Name="RELAFFIL" ColumnName="RELAFFIL" />
+                <ScalarProperty Name="WOMENONLY" ColumnName="WOMENONLY" />
+                <ScalarProperty Name="MENONLY" ColumnName="MENONLY" />
+                <ScalarProperty Name="NANTI" ColumnName="NANTI" />
+                <ScalarProperty Name="HSI" ColumnName="HSI" />
+                <ScalarProperty Name="AANAPII" ColumnName="AANAPII" />
+                <ScalarProperty Name="TRIBAL" ColumnName="TRIBAL" />
+                <ScalarProperty Name="ANNHI" ColumnName="ANNHI" />
+                <ScalarProperty Name="PBI" ColumnName="PBI" />
+                <ScalarProperty Name="HBCU" ColumnName="HBCU" />
+                <ScalarProperty Name="CCSIZSET" ColumnName="CCSIZSET" />
+                <ScalarProperty Name="CCUGPROF" ColumnName="CCUGPROF" />
+                <ScalarProperty Name="CCBASIC" ColumnName="CCBASIC" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="LOCALE2" ColumnName="LOCALE2" />
+                <ScalarProperty Name="LOCALE" ColumnName="LOCALE" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="ST_FIPS" ColumnName="ST_FIPS" />
+                <ScalarProperty Name="CONTROL" ColumnName="CONTROL" />
+                <ScalarProperty Name="HIGHDEG" ColumnName="HIGHDEG" />
+                <ScalarProperty Name="PREDDEG" ColumnName="PREDDEG" />
+                <ScalarProperty Name="NUMBRANCH" ColumnName="NUMBRANCH" />
+                <ScalarProperty Name="MAIN" ColumnName="MAIN" />
+                <ScalarProperty Name="HCM2" ColumnName="HCM2" />
+                <ScalarProperty Name="SCH_DEG" ColumnName="SCH_DEG" />
+                <ScalarProperty Name="NPCURL" ColumnName="NPCURL" />
+                <ScalarProperty Name="INSTURL" ColumnName="INSTURL" />
+                <ScalarProperty Name="ACCREDAGENCY" ColumnName="ACCREDAGENCY" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="STABBR" ColumnName="STABBR" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="INSTNM" ColumnName="INSTNM" />
+                <ScalarProperty Name="OPEID6" ColumnName="OPEID6" />
+                <ScalarProperty Name="OPEID" ColumnName="OPEID" />
+                <ScalarProperty Name="UNITID" ColumnName="UNITID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

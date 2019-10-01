@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/MainLayout.cshtml";
+}
+
+<script src="~/Scripts/DRMain.js"></script>
+<style>
+    .table .td-actions {
+        display: block !important;
+    }
+
+    .swal-button--danger {
+        background-color: #9c27b0 !important;
+    }
+
+    .swal-button--confirm {
+        background-color: #9c27b0 !important;
+    }
+
+    .btn-success {
+        background-color: #9c27b0 !important;
+    }
+
+    .ajax-loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -32px; /* -1 * image width / 2 */
+        margin-top: -32px; /* -1 * image height / 2 */
+        display: block;
+    }
+
+    .pagination > .active > a {
+        background-color: #9c27b0 !important;
+        color: white !important;
+    }
+
+    .pagination > li > a {
+        color: #9c27b0 !important;
+    }
+</style>
+<div ng-app="PMLDR">
+    <div ng-controller="ViewController" ng-init="init('@ViewBag.SessionId')">
+        <div class="container" style="width: 100%; border: 1px solid #ddd; border-radius: 3px;
+            margin-top: 10px; margin-bottom: 10px !important;">
+            <div class="row">
+                <div class="col-xs-4 text-left" style="margin-top: 10px; margin-bottom: 10px;">
+                    <button type="button" class="form-group col-xs-9 btn btn-primary" ng-click="CreateFormRedirect()">
+                        Create 
+                    </button>
+                </div>
+             
+               
+            </div>
+            <div class="table-responsive">
+                <div class="loader" data-loading>
+                    <img src="~/Content/img/updateimg.gif" class="ajax-loader" />
+
+                </div>
+                <input type="hidden" ng-model="session" />
+
+                <table class="table table-hover" style="margin-top: 10px; border: 1px solid black">
+                    <thead style="background-color: #9c27b0 !important; color: white">
+
+                    <th>Unit ID</th>
+                    <th>CITY</th>
+                    <th>STABBR</th>
+                    <th>ZIP</th>
+                    <th>ACCREDAGENCY</th>
+                    <th>INSTURL</th>
+                    <th>NPCURL</th>
+
+
+                    <th>SCH_DEG</th>
+                    <th>HCM2</th>
+                    <th>MAIN</th>
+                    <th>NUMBRANCH</th>
+
+                    <th class="text-right">Actions</th>
+
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="obj in tabledata | filter:paginate">
+                            <td>{{obj.UNITID}}</td>
+                            <td>{{obj.CITY}}</td>
+                            <td>{{obj.STABBR}}</td>
+                            <td>{{obj.ZIP}}</td>
+                            <td>{{obj.ACCREDAGENCY}}</td>
+                            <td>{{obj.INSTURL}}</td>
+                            <td>{{obj.NPCURL}}</td>
+
+                            <td>{{obj.SCH_DEG}}</td>
+                            <td>{{obj.HCM2}}</td>
+                            <td>{{obj.MAIN}}</td>
+                            <td>{{obj.NUMBRANCH}}</td>
+                            <td class="td-actions text-right">
+                                <button type="button" rel="tooltip" class="btn btn-info btn-round" 
+                                        ng-click="DeleteRecord(obj.UNITID)">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                                <button type="button" rel="tooltip" class="btn btn-success btn-round" 
+                                        ng-click="EditRecord(obj.UNITID)">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                               
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row" style="margin: 0 auto !important; width: max-content !important;">
+                <ul uib-pagination total-items="totalItemsData" ng-show="tabledata" ng-change="changePageData(currentPageData)"
+                    ng-model="currentPageData" class="pagination-sm" boundary-link-numbers="true"
+                    max-size="maxSize">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

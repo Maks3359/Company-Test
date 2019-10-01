@@ -1,0 +1,329 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/MainLayout.cshtml";
+}
+
+<script src="~/Scripts/DRMain.js"></script>
+
+<style>
+    .uib-daypicker th {
+        padding: 5px 0;
+    }
+
+    .uib-datepicker {
+        padding: 0 9px 9px;
+    }
+
+    .uib-daypicker, .uib-monthpicker, .uib-yearpicker {
+        outline: none;
+    }
+
+    button.btn.btn-default.btn-sm {
+        border-radius: 50%;
+        border: none;
+        width: 38px;
+        height: 38px;
+        border: none;
+        font-size: 12px;
+        color: #434A54;
+        outline: none;
+        box-shadow: none;
+    }
+
+    button.btn.btn-default:hover, button.btn.btn-default:focus {
+        outline: none;
+        box-shadow: none;
+        background-color: #f6f6f6;
+    }
+
+    .uib-month button.btn.btn-default {
+        border-radius: 50%;
+        border: none;
+        //border-bottom: 1px solid #EAEAEA;
+        width: 53px;
+        height: 53px;
+        border: none;
+        font-size: 14px;
+        color: #434A54;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .uib-year button.btn.btn-default {
+        border-radius: 50%;
+        border: none;
+        //border-bottom: 1px solid #EAEAEA;
+        width: 53px;
+        height: 53px;
+        border: none;
+        font-size: 14px;
+        color: #434A54;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .uib-day, .uib-month, .uib-year {
+        padding: 2px;
+    }
+
+    .uib-datepicker .uib-title {
+        width: 100% !IMPORTANT;
+    }
+
+    .uib-monthpicker .uib-title {
+        width: 100% !IMPORTANT;
+    }
+
+    .uib-daypicker tr:first-child th {
+        border-bottom: 1px solid #EAEAEA !important;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .uib-monthpicker th {
+        border-bottom: 1px solid #EAEAEA !important;
+    }
+
+    .uib-yearpicker th {
+        border-bottom: 1px solid #EAEAEA !important;
+    }
+
+    .well {
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0 9px 10px;
+    }
+
+    th {
+        text-align: left;
+        padding: 5px 0;
+        font-size: 12px;
+        text-align: center;
+        color: #aaa;
+    }
+
+    .uib-left, .uib-title, .uib-right {
+        width: auto !important;
+        outline: none;
+        color: #000000 !Important;
+        border-radius: 0 !important;
+    }
+
+    .uib-left, .uib-right {
+        font-size: 16px !important;
+    }
+
+        .uib-left:hover, .uib-title:hover, .uib-right:hover, .uib-left:focus, .uib-title:focus, .uib-right:focus {
+            background-color: transparent !important;
+            color: #008CCD !important;
+            outline: none;
+            box-shadow: none;
+        }
+
+            .uib-left:hover i, .uib-left:focus i, .uib-right:hover i, .uib-right:focus i {
+                color: #008CCD;
+            }
+
+    .uib-day .btn-info.active, .uib-day .btn-info:active, .uib-day .open > .dropdown-toggle.btn-info, .uib-day .btn-info, .uib-day .btn-info:focus, .uib-day .btn-info:hover {
+        color: #ffffff !important;
+        background-color: #008CCD !important;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .uib-month .btn-info.active, .uib-month .btn-info:active, .uib-month .open > .dropdown-toggle.btn-info, .uib-month .btn-info, .uib-month .btn-info:focus, .uib-month .btn-info:hover {
+        background-color: transparent !important;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .uib-year .btn-info.active, .uib-year .btn-info:active, .uib-year .open > .dropdown-toggle.btn-info, .uib-year .btn-info, .uib-year .btn-info:focus, .uib-year .btn-info:hover {
+        background-color: transparent !important;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .uib-day .text-info {
+        color: #434A54;
+    }
+
+    .uib-month .text-info {
+        color: #434A54;
+    }
+
+    .uib-year .text-info {
+        color: #434A54;
+    }
+
+    .uib-month .btn-default.btn-info.active,
+    .uib-month .btn-default.active,
+    .uib-month .btn-default.active:focus,
+    .uib-month .btn-default.btn-info.active .text-info {
+        outline: none;
+        color: #000000;
+        font-weight: bold;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .uib-year .btn-default.btn-info.active, .uib-year .btn-default.active, .uib-year .btn-default.btn-info.active .text-info {
+        color: #000000;
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+    .ajax-loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -32px; /* -1 * image width / 2 */
+        margin-top: -32px; /* -1 * image height / 2 */
+        display: block;
+    }
+
+    .uib-day .btn-info.active .text-info, .uib-day .btn-info .text-info, .uib-day .btn-info .text-muted {
+        color: #ffffff;
+    }
+</style>
+<div ng-app="PMLDR">
+    <h3>Create </h3>
+    <div ng-controller="CreateController" ng-init="init('@ViewBag.SessionId')">
+        <div class="container" style="width: 100%; border: 1px solid #ddd; border-radius: 3px;
+            margin-top: 10px; margin-bottom: 10px !important;">
+            <form name="test" novalidate role="form">
+                <div class="loader" data-loading>
+                    <img src="~/Content/img/updateimg.gif" class="ajax-loader" />
+
+                </div>
+                <input type="hidden" ng-model="session" />
+                <div class="row" style="padding-left: 15px !important"  ng-class="{ 'has-error' : DRILLRE.PrjNo.$invalid && !DRILLRE.PrjNo.$pristine }">
+                    <label class="col-sm-1 form-group col-form-label col-form-label-sm text-left justify-content-start"
+                        for="ClientNm">
+                        Unit ID
+                    </label>
+                    <div class="col-sm-2 form-group">
+                        <input class="form-control" id="UNITID" type="input" 
+                            ng-model="DRILLRE.UNITID" />
+                       
+
+                    </div>
+                  
+                    <div class="col-sm-5">
+                    </div>
+                    <label class="col-sm-1 form-group col-form-label col-form-label-sm float-right"
+                           for="ClientNm">
+                        CITY
+                    </label>
+                    <div class="form-group col-sm-2 " style="text-align: right; padding-right: 15px !important">
+                        <p class="input-group">
+
+                            <input class="form-control" id="CITY" type="text" ng-model="DRILLRE.CITY" />
+                            
+                        </p>
+                    </div>
+
+
+                </div>
+               
+                <div class="row" style="border-bottom: 1px solid #ddd;">
+                </div>
+                <div class="form-row">
+                    <label class="form-group col-sm-1 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        STABBR
+                    </label>
+                    <div class=" form-group col-sm-2 " style="text-align: left" >
+                        <input class="form-control" type="text" ng-model="DRILLRE.STABBR" ng-required="true" />
+                      
+                    </div>
+                    <label class=" form-group col-sm-1 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        ZIP
+                    </label>
+                    <div class="form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.ZIP" />
+                    </div>
+                    <label class=" form-group col-sm-2 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        ACCREDAGENCY
+                    </label>
+                    <div class="form-group col-sm-1 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.ACCREDAGENCY" />
+                    </div>
+                    <label class=" form-group col-sm-1 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        INSTURL
+                    </label>
+                    <div class="form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.INSTURL" />
+                    </div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #ddd;">
+                </div>
+                <div class="form-row">
+                    <label class="form-group col-sm-2 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        NPCURL
+                    </label>
+                    <div class=" form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.NPCURL" />
+                    </div>
+                    <label class=" form-group col-sm-2 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        SCH_DEG
+                    </label>
+                    <div class="form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.SCH_DEG" />
+                    </div>
+                    <label class="form-group col-sm-2 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        HCM2
+                    </label>
+                    <div class=" form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.totalMonitoringWell" />
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <label class=" form-group col-sm-2 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        MAIN
+                    </label>
+                    <div class="form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.MAIN" />
+                    </div>
+                    <label class="form-group col-sm-2 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        NUMBRANCH
+                    </label>
+                    <div class=" form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.NUMBRANCH" />
+                    </div>
+                    <label class=" form-group col-sm-2 col-form-label col-form-label-sm text-left justify-content-start"
+                           for="ClientNm">
+                        PREDDEG
+                    </label>
+                    <div class="form-group col-sm-2 " style="text-align: left">
+                        <input class="form-control" type="text" ng-model="DRILLRE.PREDDEG" />
+                    </div>
+
+                </div>
+                
+                <div class="form-row">
+                    <div class="col-xs-12 text-right" style="margin-top: 10px; margin-bottom: 10px;">
+                        <button type="button" class="form-group btn btn-primary" ng-click="saveDRDetails()">
+                            SAVE
+                        </button>
+                       
+                        <button type="button" class="form-group btn btn-primary" ng-click="FormReset()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
